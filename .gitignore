@@ -1,0 +1,10 @@
+data/
+results/
+*.bam
+*.cram
+*.vcf.gz
+*.fa
+*.fasta
+*.fastq.gz
+*.log
+__pycache__/

@@ -1,0 +1,7 @@
+# Five-input SynPan orthogroup construction
+
+The final invocation is `perl synpan_build.pl grass.list` with input labels in this order: `Atau`, `osat`, `pedC`, `pedD`, `Zmay`. Each label needs `<label>.prot` and `<label>.bed`. Protein IDs and BED gene IDs must agree, one transcript per gene; BED rows must be sorted by genomic position. The main script calls DIAMOND and DAGchainer and produces `grass.list.SG`, `grass.list.SG.pan` and `grass.list.sg.stat`.
+
+`run_synpan.sbatch` stages symlinks to inputs in a dedicated work directory before running the main Perl script. This matters because the main script renames each `.prot` file in place and prefixes FASTA identifiers. Export absolute `INPUT_DIR` and `WORK_DIR`, create `logs/` in the submission directory, then submit with `sbatch --export=ALL run_synpan.sbatch`. The original DAGchainer location is hardcoded in `../synpan_build.pl`; install it there or adjust that one path for the cluster. Use a fresh `WORK_DIR` for each run.
+
+`toolkit/` retains all 14 auxiliary Perl files from the same SynPan directory. They are grouped here with the main script. The displayed `synpan_build.pl` does **not** call these auxiliary files, so they are retained for the downstream pan/haplotype operations rather than inserted into the main execution order. `02_blastp_2_DAGchain.pl` and `03_merge.pl` provide modular alternatives to stages contained in the main builder. The five labels are analysis inputs, not five focal biological species; bamboo C/D remain two subgenome inputs.
