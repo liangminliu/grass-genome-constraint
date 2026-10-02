@@ -7,7 +7,7 @@ This repository follows the Methods order. It contains the author-supplied scrip
 | Step | Directory | Released workflow |
 | --- | --- | --- |
 | Grass phylogeny | [`scripts/00_phylogeny/`](scripts/00_phylogeny/) | ROADIES accurate mode, 97 input genomes |
-| 1. Genome-wide synteny | [`scripts/01_synteny/`](scripts/01_synteny/) | 3 focal references × 93 GeneTribe queries; final job manifest requested |
+| 1. Genome-wide synteny | [`scripts/01_synteny/`](scripts/01_synteny/) | Consolidated three-reference GeneTribe launcher, 94-species list, summary and grouped plots |
 | 2. Whole-genome alignment | [`scripts/02_alignment/`](scripts/02_alignment/) | Existing-tree MSA driver and Fig. 2 coverage/depth scripts |
 | 3. GERP-based evolutionary constraint | [`scripts/03_constraint/`](scripts/03_constraint/) | GERP category intersections and score figures; scoring inputs requested |
 | 4. Population SNP filtering | [`scripts/04_snp_filter/`](scripts/04_snp_filter/) | A. tauschii filtered VCF and exact 141-name retained list |

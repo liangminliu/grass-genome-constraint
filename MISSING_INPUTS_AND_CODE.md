@@ -3,7 +3,7 @@
 | Methods step | Needed to complete the released workflow |
 | --- | --- |
 | Grass phylogeny | 97-genome FASTA/accession manifest, production ROADIES log and final tree hash; final treePL calibration/configuration and dated-tree output if treePL code is to be released. |
-| Genome-wide synteny | Final GeneTribe 3 × 93 pair manifest and launch script, reference/query assembly versions, block-retention rule and final collinear-block table; JCVI command and figure input for the chromosome view. |
+| Genome-wide synteny | The 94-species list and three-reference GeneTribe launcher are now included. Still needed: exact reference/query assembly versions and matching FASTA/BED/chrlist inputs, the `genome.size` table, final block-retention rule and collinear-block table, and the JCVI chromosome-view command and figure input. |
 | Whole-genome alignment | Exact existing ROADIES tree, focal YAML/Snakefile revision, 93-query lists for each reference, three `roast.maf` hashes and the BED/coverage tables used for Fig. 2. The release MSA driver depends on the original pipeline checkout, which is not bundled. |
 | GERP constraint | Final fourfold-site alignment, neutral tree/phyloFit model, masks, GERP++ command and per-base score files for each reference; category BED definitions and curated tables used by the pie/histogram scripts. |
 | Population SNP filtering | Bamboo and teosinte final mapping→GATK→KING→filter commands and sample sheets; final VCF hashes. The supplied A. tauschii list specifies 141 IDs; provide any separate 140-ID non-ROH analysis input if used. |
