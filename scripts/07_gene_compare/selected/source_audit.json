@@ -1,0 +1,10 @@
+{
+  "strict_core_groups_gt4": 5108,
+  "matched_snp_positive_groups": 668,
+  "aegilops_zero_filled_groups": [
+    "SG0039462",
+    "SG0039466"
+  ],
+  "gerp_gt2_maize_atau_bh_p": 0.0972031304835916,
+  "source_files_checked": 12
+}
