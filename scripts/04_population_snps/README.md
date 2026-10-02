@@ -1,7 +1,5 @@
 # Population SNP filtering
 
-- `selected/common/`: reads to gVCF, joint SNP calling, relatedness filtering and final population VCF filtering for bamboo and maize/teosinte. These upstream commands were reconstructed from Methods.
-- `selected/atau/`: supplied *A. tauschii* VCF filtering and sample selection scripts.
+`selected/common/` contains the bamboo and teosinte SNP workflow. The retained-sample lists in `selected/ped/` and `selected/zmay/` were exported from final Supplementary Table S3 and match the sample sets in Table S6. Pass the corresponding list to `04_final_population_filter.sh` at run time. `extract_retained_lists_from_s3.py` regenerates both lists from the workbook.
 
-Provide each reference genome and sequencing inputs. The *A. tauschii* retained-sample list is in `selected/atau/retained_samples.txt`; pass its path through `SAMPLES` when running the extraction script.
-
+`selected/atau/` contains the supplied *A. tauschii* filtering script and retained-sample list. Pass the list path through `SAMPLES` when running its extraction script.

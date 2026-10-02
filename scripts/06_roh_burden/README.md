@@ -1,5 +1,5 @@
 # Heterozygosity, ROH and burden
 
-`selected/common/calculate_pi_heterozygosity.sh` calculates π and heterozygosity. The species-specific `run_roh_froh.sh` scripts calculate ROH and FROH with PLINK gap100/kb100 and five missing sites per window.
+The species-specific `run_roh_froh.sh` scripts call ROH/FROH with gap100/kb100 and five missing sites per window. `selected/common/run_gerp_burden.sh` runs the three recovered GERP burden calculators using the final ROH and FROH inputs supplied at run time. It produces per-sample tables for S6 and S8; the associated plotting programs are in this directory.
 
-`plot_heterozygosity_roh_fig6_abc.R` plots Fig. 6A–C. `plot_bamboo_roh_landscape_fig6d.R` plots the bamboo-only Fig. 6D. For Supplementary Fig. S8, `prepare_s8_source.py` checks the burden data against Supplementary Table S6 and `plot_s8_genotype_burden.R` draws the panels. Supply the final S3/S6 workbooks and matching analysis tables locally.
+The recovered original burden launchers referenced earlier `gap1000` ROH paths, so they are not used by the shared launcher. Confirm the ROH/FROH source underlying the published S3/S6 tables before claiming an exact end-to-end rerun.
