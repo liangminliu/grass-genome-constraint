@@ -2,8 +2,8 @@
 set -euo pipefail
 : "${INPUT_VCF:?Set INPUT_VCF to the filtered A. tauschii VCF}"
 : "${OUTPUT_VCF:?Set OUTPUT_VCF to the retained-sample VCF.gz}"
-here=$(cd "$(dirname "$0")" && pwd)
-samples=${SAMPLES:-$here/../../../../metadata/atau_retained_samples.txt}
+: "${SAMPLES:?Set SAMPLES to the retained-sample ID list}"
+samples="$SAMPLES"
 [[ -s "$INPUT_VCF" && -s "$samples" ]] || exit 1
 [[ "$OUTPUT_VCF" == *.vcf.gz ]] || { echo 'OUTPUT_VCF must end in .vcf.gz' >&2; exit 1; }
 [[ $(sort "$samples" | uniq -d | wc -l) -eq 0 ]] || { echo 'Duplicate sample names' >&2; exit 1; }
@@ -16,3 +16,4 @@ mkdir -p "$(dirname "$OUTPUT_VCF")"
 bcftools view -S "$samples" -Oz -o "$OUTPUT_VCF" "$INPUT_VCF"
 bcftools index -t -f "$OUTPUT_VCF"
 echo "Retained $(wc -l < "$samples") samples in $OUTPUT_VCF"
+

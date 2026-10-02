@@ -1,45 +1,23 @@
 # Evolutionary constraint and deleterious variation across grass genomes
 
-Code associated with Liu et al., *Deep evolutionary constraint predicts deleterious variation in grass genomes*.
+Scripts associated with Liu et al., *Deep evolutionary constraint predicts deleterious variation in grass genomes*. The workflow follows the Methods in `MANUSCRIPT_MASTER_20260929_abstract_references_tracked.docx`.
 
-This repository follows the Methods order. It contains the author-supplied scripts and the compact workflows designated for release. Historical alternatives, exploratory reruns and methods-only drafts are held outside this repository. `CONFIRMED_FILES.tsv` records the source and SHA-256 of every included code or metadata file. Large genome, MAF and VCF inputs are not included.
-
-| Step | Directory | Released workflow |
-| --- | --- | --- |
-| Grass phylogeny | [`scripts/00_phylogeny/`](scripts/00_phylogeny/) | ROADIES accurate mode, 97 input genomes |
-| 1. Genome-wide synteny | [`scripts/01_synteny/`](scripts/01_synteny/) | Consolidated three-reference GeneTribe launcher, 94-species list, summary and grouped plots |
-| 2. Whole-genome alignment | [`scripts/02_alignment/`](scripts/02_alignment/) | Existing-tree MSA driver and Fig. 2 coverage/depth scripts |
-| 3. GERP-based evolutionary constraint | [`scripts/03_constraint/`](scripts/03_constraint/) | GERP category intersections and figures, plus Methods-based 500-kb Fig. 3/S1 tracks |
-| 4. Population SNP filtering | [`scripts/04_snp_filter/`](scripts/04_snp_filter/) | A. tauschii source scripts and bamboo/teosinte Methods-based reads-to-final-VCF workflow |
-| 5. Deleterious variant annotation | [`scripts/05_annotation/`](scripts/05_annotation/) | Three-species SIFT 4G and SnpEff workflows; A. tauschii SNP–GERP overlap |
-| 6. ROH, FROH and individual burden | [`scripts/06_roh_burden/`](scripts/06_roh_burden/) | Three-species π/heterozygosity, ROH/FROH, Fig. 6 and audited S8 source/plot scripts |
-| 7. Synteny-based gene comparisons | [`scripts/07_gene_compare/`](scripts/07_gene_compare/) | SynPan, gene-class/strict-core analysis programs and Fig. 7/S9/S10 panel-to-test audit |
-
-Read each step's `README.md` before running it. The steps currently missing a confirmed production script or exact input are listed in [`MISSING_INPUTS_AND_CODE.md`](MISSING_INPUTS_AND_CODE.md). The result-figure code audit is in [`VISUALIZATION_CODE_STATUS.md`](VISUALIZATION_CODE_STATUS.md); a Methods mention or historical figure filename alone is not treated as evidence of the final plotted source.
-
-## Confirmed analysis settings
-
-- ROADIES continuity 85, support threshold 0.95 and initial `GENE_COUNT: 16000` sampled fragments.
-- GeneTribe: each focal reference compared with 93 query grass genomes.
-- GERP classes: cumulative >2, >4 and >6. SIFT damaging prediction: <0.05.
-- PLINK ROH: `--homozyg-gap 100`, `--homozyg-kb 100`, `--homozyg-window-missing 5`.
-- The supplied A. tauschii retention list has 141 unique IDs, including `BW_01192`; the ROH script excludes that ID for its 140-individual analysis.
-- SynPan labels: `Atau`, `osat`, `pedC`, `pedD`, `Zmay`. Bamboo C/D are two subgenome inputs, not separate focal species.
-
-Scripts retain HPC paths from the source runs. Set cluster paths and input names as described in the step README files before submission. SIFT/GERP labels are predictions, not measured fitness effects.
-
-## Manuscript figures
-
-| Figure | Analysis |
+| Step | Code |
 | --- | --- |
-| Fig. 1 | Phylogeny and synteny |
-| Fig. 2 | Whole-genome alignment and coverage |
-| Figs. 3–4 | Evolutionary constraint; the supplied GERP distribution is Fig. 4A |
-| Fig. 5 | Predicted deleterious variation |
-| Fig. 6 | Heterozygosity and ROH |
-| Fig. 7 | Synteny-based constraint and coding variation |
+| Grass phylogeny | [`scripts/00_phylogeny/`](scripts/00_phylogeny/) |
+| Genome-wide synteny | [`scripts/01_synteny/`](scripts/01_synteny/) |
+| Whole-genome alignment | [`scripts/02_alignment/`](scripts/02_alignment/) |
+| Evolutionary constraint | [`scripts/03_constraint/`](scripts/03_constraint/) |
+| Population SNP filtering | [`scripts/04_population_snps/`](scripts/04_population_snps/) |
+| Deleterious variant annotation | [`scripts/05_annotation/`](scripts/05_annotation/) |
+| ROH, FROH and individual burden | [`scripts/06_roh_burden/`](scripts/06_roh_burden/) |
+| Synteny-based gene comparisons | [`scripts/07_gene_compare/`](scripts/07_gene_compare/) |
 
-Major software includes ROADIES, treePL, GeneTribe, JCVI, LAST, MULTIZ/ROAST, PHAST, GERP++, BWA-MEM, GATK, VCFtools, PLINK, SIFT 4G and SnpEff. The repository contains confirmed code for only the steps identified in the table above; [`MISSING_INPUTS_AND_CODE.md`](MISSING_INPUTS_AND_CODE.md) identifies the remaining production commands and data.
+The directories contain analysis and plotting scripts for Figs. 1–7 and their supplementary figures. Input genomes, sequence alignments, VCFs and individual-level results are not included. Set the paths in the scripts for the target computing environment.
+
+Key settings: ROADIES continuity 85 and support threshold 0.95; GeneTribe compares each focal reference with 93 other grasses; GERP thresholds >2, >4 and >6; SIFT <0.05; PLINK ROH gap100/kb100 with five missing sites per window.
+
+Some bamboo and maize upstream SNP commands and the Fig. 3/S1 window-track scripts were reconstructed from Methods. Their directory READMEs identify them. The remaining scripts were consolidated from supplied analysis code.
 
 ## Citation
 
