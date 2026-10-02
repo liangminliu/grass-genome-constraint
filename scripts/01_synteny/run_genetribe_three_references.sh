@@ -2,7 +2,7 @@
 # One production entry point for the three GeneTribe reference comparisons.
 # Submit one array task per query: bsub -J 'genetribe[1-94]' -n 8 -q Q96C1T_X12 \
 #   -o 'logs/genetribe.%J.%I.out' -e 'logs/genetribe.%J.%I.err' \
-#   'bash scripts/01_synteny/run_genetribe_three_references.sh run'
+#   bash scripts/01_synteny/run_genetribe_three_references.sh run
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

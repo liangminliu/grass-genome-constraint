@@ -19,7 +19,7 @@ bash scripts/01_synteny/run_genetribe_three_references.sh manifest > genetribe_p
 mkdir -p logs
 bsub -J 'genetribe[1-94]' -q Q96C1T_X12 -n 8 \
   -o 'logs/genetribe.%J.%I.out' -e 'logs/genetribe.%J.%I.err' \
-  'bash scripts/01_synteny/run_genetribe_three_references.sh run'
+  bash scripts/01_synteny/run_genetribe_three_references.sh run
 ```
 
 The launcher stores each pair in `<query>/ref_<reference>_output/`, skips completed pairs, and stops if an incomplete result already exists. It uses the observed orientation `genetribe core -l <reference> -f <query>`. Three reference runs are sequential within each query job to avoid GeneTribe temporary-file collisions. Adapt the LSF queue and core request to the cluster.
