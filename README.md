@@ -12,7 +12,7 @@ This repository follows the Methods order. It contains the author-supplied scrip
 | 3. GERP-based evolutionary constraint | [`scripts/03_constraint/`](scripts/03_constraint/) | GERP category intersections and score figures; scoring inputs requested |
 | 4. Population SNP filtering | [`scripts/04_snp_filter/`](scripts/04_snp_filter/) | A. tauschii filtered VCF and exact 141-name retained list |
 | 5. Deleterious variant annotation | [`scripts/05_annotation/`](scripts/05_annotation/) | Three-species SIFT 4G and SnpEff workflows; A. tauschii SNP–GERP overlap |
-| 6. ROH, FROH and individual burden | [`scripts/06_roh_burden/`](scripts/06_roh_burden/) | Three-species π/heterozygosity and author-supplied final ROH/FROH scripts |
+| 6. ROH, FROH and individual burden | [`scripts/06_roh_burden/`](scripts/06_roh_burden/) | Three-species π/heterozygosity, final ROH/FROH scripts and revised Fig. 6A-C visualization |
 | 7. Synteny-based gene comparisons | [`scripts/07_gene_compare/`](scripts/07_gene_compare/) | Five-input SynPan and its 14 companion Perl scripts |
 
 Read each step's `README.md` before running it. The steps currently missing a confirmed production script or exact input are listed in [`MISSING_INPUTS_AND_CODE.md`](MISSING_INPUTS_AND_CODE.md); a Methods mention alone is not treated as evidence of an executed command.
