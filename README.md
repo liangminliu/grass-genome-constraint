@@ -1,6 +1,6 @@
 # Evolutionary constraint and deleterious variation across grass genomes
 
-Scripts associated with Liu et al., *Deep evolutionary constraint predicts deleterious variation in grass genomes*.
+Scripts associated with Liu et al., *Deep evolutionary constraint predicts deleterious variation in grass genomes*. The workflow follows the Methods in `MANUSCRIPT_MASTER_1117_reviewed.docx`.
 
 | Step | Code |
 | --- | --- |
@@ -10,10 +10,10 @@ Scripts associated with Liu et al., *Deep evolutionary constraint predicts delet
 | Evolutionary constraint | [`scripts/03_constraint/`](scripts/03_constraint/) |
 | Population SNP filtering | [`scripts/04_population_snps/`](scripts/04_population_snps/) |
 | Deleterious variant annotation | [`scripts/05_annotation/`](scripts/05_annotation/) |
-| ROH, FROH and individual burden | [`scripts/06_roh_burden/`](scripts/06_roh_burden/) |
-| Synteny-based gene comparisons | [`scripts/07_gene_compare/`](scripts/07_gene_compare/) |
+| Synteny-based gene comparisons | [`scripts/06_gene_compare/`](scripts/06_gene_compare/) |
+| ROH, FROH and individual burden | [`scripts/07_roh_burden/`](scripts/07_roh_burden/) |
 
-The directories contain analysis and plotting scripts for Figs. 1–7 and their supplementary figures. Input genomes, sequence alignments, VCFs, and individual-level results are not included. Set the paths in the scripts for the target computing environment.
+The directories contain analysis and plotting scripts for Figs. 1–7 and their supplementary figures. Input genomes, sequence alignments, VCFs and individual-level results are not included. Set the paths in the scripts for the target computing environment.
 
 Key settings: ROADIES continuity 85 and support threshold 0.95; GeneTribe compares each focal reference with 93 other grasses; GERP thresholds >2, >4 and >6; SIFT <0.05; PLINK ROH gap100/kb100 with five missing sites per window.
 
