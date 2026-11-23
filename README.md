@@ -1,6 +1,6 @@
 # Evolutionary constraint and deleterious variation across grass genomes
 
-Scripts associated with Liu et al., *Deep evolutionary constraint predicts deleterious variation in grass genomes*. The workflow follows the Methods in `MANUSCRIPT_MASTER_20260929_abstract_references_tracked.docx`.
+Scripts associated with Liu et al., *Deep evolutionary constraint predicts deleterious variation in grass genomes*. The workflow follows the Methods in `MANUSCRIPT_MASTER_1117_reviewed.docx`.
 
 | Step | Code |
 | --- | --- |
