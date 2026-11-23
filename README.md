@@ -15,10 +15,10 @@ Scripts associated with Liu et al., *Deep evolutionary constraint predicts delet
 
 The directories contain analysis and plotting scripts for Figs. 1–7 and their supplementary figures. Input genomes, sequence alignments, VCFs, and individual-level results are not included. Set the paths in the scripts for the target computing environment.
 
-Key settings: ROADIES continuity 85 and support threshold 0.95; GeneTribe compares each focal reference with 93 other grasses; GERP thresholds >2, >4 and >6; SIFT <0.05; PLINK ROH gap100/kb100 with five missing sites per window.
+Key settings: ROADIES continuity 85 and support threshold 0.95; GeneTribe compares each focal reference with 93 other grasses; GERP thresholds >2, >4, and >6; SIFT <0.05; PLINK ROH gap100/kb100 with five missing sites per window.
 
 ## Citation
 
-Liu L-M et al. *Deep evolutionary constraint predicts deleterious variation in grass genomes*. Manuscript in preparation.
+Liu L-M et al. *Deep evolutionary constraint predicts deleterious variation in grass genomes*. 
 
 
